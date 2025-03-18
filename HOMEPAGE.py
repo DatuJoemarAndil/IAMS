@@ -79,17 +79,5 @@ erWait(driver, 10).until(EC.presence_of_element_located((By.TAG_NAME, "body")))
                     driver.quit()
                     exit()
 
-            print("✅ All texts are valid!")
 
-        else:
-            print("⚠️ Login button is not clickable!")
-
-    except TimeoutException:
-        print("❌ Login Failed! Error: TimeoutException (Login button not found)")
-        driver.quit()
-        exit()
-
-except (NoSuchElementException, TimeoutException, Exception) as e:
-    print(f"❌ Login Failed! Error: {repr(e)}")
-    driver.quit()
     exit()
